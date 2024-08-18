@@ -1,16 +1,18 @@
-import { UpdatePrivacy } from "../../../helpers/UpdatePrivacy";
-import { UpdateLogin } from "../../../helpers/UpdateLogin";
-import { UpdatePassword } from "../../../helpers/UpdatePassword";
+import {   MDBCardBody, MDBContainer } from "mdb-react-ui-kit";
+import { UpdatePrivacy } from "../../../components/Settings/UpdatePrivacy";
+import { UpdatePassword } from "../../../components/Settings/UpdatePassword";
 
 export const Settings = () => {
+  
 
-
-    return (
-        <>
-            <h1>Settings</h1>
+  return (
+    <MDBContainer className="py-5">
+      <div>
+        <MDBCardBody className="p-4">
             <UpdatePrivacy/>
-            <UpdateLogin />
-            <UpdatePassword />
-        </>
-    );
+            <UpdatePassword/>
+          </MDBCardBody>
+      </div>
+    </MDBContainer>
+  );
 };

@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { getAllPosts, handlePostUpload } from "../../../helpers/api"
 import { IPost } from "../../../helpers/types"
-import { MDBCardImage, MDBCol, MDBRow } from "mdb-react-ui-kit"
-import { BASE } from "../../../helpers/deafult"
 import { Gallery } from "../../../components/Gallery"
 
 export const Photos = () => {
@@ -32,7 +30,7 @@ export const Photos = () => {
 
     }, [])
 
-    return <>
+    return <div className="container">
         <h1>Posts</h1>
         <input
             className="form-control"
@@ -51,5 +49,6 @@ export const Photos = () => {
             posts={posts}
         />
     
-    </>
+       
+    </div>
 }

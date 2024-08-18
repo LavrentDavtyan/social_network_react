@@ -48,4 +48,4 @@ export default tseslint.config({
   },
 })
 ```
-# social_network_react
+# social-app

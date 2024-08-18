@@ -8,6 +8,8 @@ import { Profile } from './pages/Profile/dashboard'
 import { Layout } from './pages/Profile/Layout'
 import { Photos } from './pages/Profile/photos'
 import { Settings } from './pages/Profile/settings'
+import { Search } from './pages/Profile/search'
+import { Account } from './pages/Profile/account'
 
 const routes = createBrowserRouter([
   {
@@ -19,20 +21,28 @@ const routes = createBrowserRouter([
     element:<Login/>
   },
   {
-    path:'/profile',
-    element:<Layout/>,
-    children:[
+    path: '/profile',
+    element: <Layout />,
+    children: [
       {
-        path:'',
-        element:<Profile/>
+        path: '',
+        element: <Profile />
       },
       {
-        path:'photos',
-        element:<Photos/>
+        path: 'albums',
+        element: <Photos />
       },
       {
-        path:'settings',
-        element:<Settings/>
+        path: 'settings',
+        element: <Settings />
+      },
+      {
+        path:'search',
+        element:<Search/>
+      },
+      {
+        path:':id',
+        element: <Account/>
       }
     ]
   }
