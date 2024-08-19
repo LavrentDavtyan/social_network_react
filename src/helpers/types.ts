@@ -41,3 +41,7 @@ export interface IChange {
   password?: string;
   login?: string;
 }
+
+export interface IRequests extends IUser{
+  id: number
+}
