@@ -29,7 +29,7 @@ export const Account = () => {
             .catch(error => {
                 console.error("Failed to fetch account:", error);
             });
-    }, [id, navigate]);
+    }, [id, navigate, user]);
 
     const handleRequest = () => {
         if (user?.connection.following) {
@@ -114,11 +114,11 @@ export const Account = () => {
                         <div className="d-flex flex-row text-white">
                             <div className="p-4 bg-primary text-center skill-block">
 
-                                <h4>{ user.connection.followers?.length || 0}</h4>
+                                <h4>{ user.followers?.length || 0}</h4>
                                 <h6>Followers</h6>
                             </div>
                             <div className="p-3 bg-success text-center skill-block">
-                                <h4>{user.connection.following?.length || 0}</h4>
+                                <h4>{user.following?.length || 0}</h4>
                                 <h6>Following</h6>
                             </div>
                             <div className="p-3 bg-danger text-center skill-block">
