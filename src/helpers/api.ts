@@ -87,22 +87,20 @@ export const handleCancelation = async (id: number): Promise<IResponse> => {
   return response.data
 }
 
-export const getAllRequests = async(): Promise<IResponse>=> {
-  const response = await Axios.get("/requests")
+export const handlePostReaction = async (id: number): Promise<IResponse> => {
+  const response = await Axios.post('/posts/react/' + id)
   return response.data
 }
 
-export const handleAcceptRequest = async(id: number): Promise<IResponse> =>{
-  const response = await Axios.patch("/requests/accept/" + id)
+export const handleGetPost = async (id: number): Promise<IResponse> => {
+  const response = await Axios.get('/posts/' + id)
   return response.data
 }
 
-export const handleDeclineRequest = async(id:number): Promise<IResponse>=> {
-  const response = await Axios.patch("/requests/decline/" + id)
-  return response.data
-}
+export const handleMakeComment = async (id: number, text: string): Promise<IResponse> => {
+  const response = await Axios.post(`/posts/comment/${id}`, {
+    text,
+  });
+  return response.data;
+};
 
-export const getPosts = async():Promise<IResponse> =>{
-  const response = await Axios.get('/posts')
-  return response.data
-}

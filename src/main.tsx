@@ -10,7 +10,6 @@ import { Photos } from './pages/Profile/photos'
 import { Settings } from './pages/Profile/settings'
 import { Search } from './pages/Profile/search'
 import { Account } from './pages/Profile/account'
-import { Requests } from './pages/Profile/requests'
 
 const routes = createBrowserRouter([
   {
@@ -44,10 +43,6 @@ const routes = createBrowserRouter([
       {
         path:':id',
         element: <Account/>
-      },
-      {
-        path:'requests',
-        element: <Requests/>
       }
     ]
   }

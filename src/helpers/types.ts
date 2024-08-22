@@ -33,6 +33,8 @@ export interface IPost {
   title: string;
   picture: string;
   likes: IUser[];
+  comments: IUser[];
+  isLiked:boolean
 }
 
 export interface IChange {
@@ -40,8 +42,4 @@ export interface IChange {
   newpwd?: string;
   password?: string;
   login?: string;
-}
-
-export interface IRequests extends IUser{
-  id: number
 }
